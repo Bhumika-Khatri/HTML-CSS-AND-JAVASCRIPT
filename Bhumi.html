@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Wonderland</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+        }
+
+        header {
+            background-color:aquamarine;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-content {
+            padding: 15px;
+        }
+
+        .product h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .product p {
+            color: #666;
+            display: none;
+        }
+
+        .product.active p {
+            display: block;
+        }
+        button{
+    border: solid rgb(63, 237, 5) 2px;
+    padding: 10px;
+    color:green;
+    border-radius: 20px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    width: 60%;
+    font-size: 10px;
+}
+
+button:active {
+    background-color: #2e6130b4;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Makeup Wonderland</h1>
+        <p>Your beauty journey starts here!</p>
+
+    </header>
+    <div class="product-container">
+        <div class="product" onclick="toggleDescription(this)">
+            <img src="https://m.media-amazon.com/images/I/51cfrv-GX5L._SL1080_.jpg" alt="Garnier Skin Natural">
+            <div class="product-content">
+                <h3>Garnier Skin Naturals, Face Serum</h3>
+                <p> Increases Skin's Glow Instantly and Reduces Spots Overtime, Bright Complete Vitamin C Booster, 30 ml</p>
+                
+            </div>
+            <button onclick="document.location='atc.html'">Add To Cart</button>
+        </div>
+
+        <div class="product" onclick="toggleDescription(this)">
+            <img src="https://m.media-amazon.com/images/I/51057YSuDpL._SX300_SY300_QL70_FMwebp_.jpg" alt="Eyeshadow Palette">
+            <div class="product-content">
+                <h3>Nude Eyeshadow Palette</h3>
+                <p>Create stunning eye looks with this versatile nude palette.</p>
+                
+            </div>
+            <button onclick="document.location='atc.html'">Add To Cart</button>
+        </div>
+
+        <div class="product-container">
+            <div class="product" onclick="toggleDescription(this)">
+                <img src="https://m.media-amazon.com/images/I/41UnJmXp-FL._SX300_SY300_QL70_FMwebp_.jpg" alt="Brushes">
+                <div class="product-content">
+                    <h3>Swiss Beauty Professional Face & Eye Brush</h3>
+                    <p>  Set of 6 | Synthetic Fibres | Easy Blending</p>
+                   
+                </div>
+                <button onclick="document.location='atc.html'">Add To Cart</button>
+            </div>
+            <div class="product-container">
+                <div class="product" onclick="toggleDescription(this)">
+                    <img src="https://m.media-amazon.com/images/I/41qGMGa5uNL._SX300_SY300_QL70_FMwebp_.jpg" alt="Brushes">
+                    <div class="product-content">
+                        <h3>Blue Heaven Festive MakeUp Kit</h3>
+                        <p>Fair Tone Combo, (Pack of 8)</p>
+                
+                    </div>
+                    <button onclick="document.location='atc.html'">Add To Cart</button>
+                </div>
+                <div class="product-container">
+                    <div class="product" onclick="toggleDescription(this)">
+                        <img src="https://m.media-amazon.com/images/I/716tTJh9fFL._SL1500_.jpg" alt="Brushes">
+                        <div class="product-content">
+                            <h3>Swiss Beauty Mini Baked Shimmer Blusher And Highlighter Palette For Face Makeup</h3>
+                            <p>Multicolor-3, 7 Gm</p>
+                          
+                        </div>
+                        <button onclick="document.location='atc.html'">Add To Cart</button>
+                       </div>
+
+                  
+                  <script>
+        function toggleDescription(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
